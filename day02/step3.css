@@ -1,0 +1,95 @@
+/* 
+    어디의 { 무엇을 : 어떻게;
+    - 하의 의 바지를 청바지
+    
+    1. 어디의 ????
+        - CSS 선택자
+        1. *                   : 공통(일드카드) : 모든 곳에 적용
+            *{ color : red; }
+            문서[html] 모든 곳에 색상을 레드로 
+
+        2. 마크업 이름          : 해당 마크업만 적용
+            p { color : red; }
+            p 태그에 색상을 레드로 
+        
+        3. class속성            : [복수형] 해당 class명을 가지는 곳에 적용
+            .class명{ color : red; }
+            class명을 가진곳에 색상을 레드로 
+
+        4. id 속성              : [단일형] 해당 id면을 가지는 곳에 적용
+          #id명{ color : red;}
+            id명을 가진 곳에 색상을 레드로 
+        - 식별에 중복 속성이 있을 떄 우선 순위
+            *  <  마크업  <  class  <  id
+    
+    2. 무엇을
+        - 속성명
+
+    3. 어떻게
+        - 속성 갓ㅄ
+
+*/
+
+
+
+
+
+/* 공통 모든 곳에 적용 */
+*{ color: red;}
+
+/* 마크업 */
+h4{color: yellow;}
+
+/* class */
+.text1{color: blue;}
+
+/* id */
+#text2{color: green;}
+
+/* 배경색 */
+body{background-color: aquamarine;}
+
+/* title 이라는 이름을 갖는 마크업 */
+.title{
+    font-family: 궁서;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+@font-face {
+    font-family: 'EASTARJET-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+.content{
+    font-family: 'EASTARJET-Medium';
+    font-size: 20px;
+    color: brown;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    line-height: 160%
+
+}
+
+#writer{
+    text-align: center;
+    text-decoration: underline ;
+    text-shadow: 2px 1px 15px red ;
+
+    /* 색상을 표현 하는 방법 */
+    color: red;
+    color: #9b8d10;
+    color : rgb(39, 41, 167)
+
+}
+
+
+
+
+
+
+
+
