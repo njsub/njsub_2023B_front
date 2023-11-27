@@ -1,0 +1,41 @@
+
+.product{
+    width: 400px;
+    border: solid 1px #e8e8e8;
+    margin: 20px;
+}
+
+.pimg1{
+    width: 400px;
+    
+}
+
+.row2{
+    font-size: 20px;
+    font-weight: bold;
+    border-top: solid 1px #e8e8e8;
+    padding: 30px 10px 10px 10px;
+
+}
+
+.row3{
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+.row4{
+    padding: 10px;
+
+}
+
+.row5{
+    padding: 10px;
+
+}
+
+.orange{
+    color: orange;
+    font-weight: bold;
+
+}
