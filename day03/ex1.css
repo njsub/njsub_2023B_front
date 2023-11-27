@@ -1,0 +1,51 @@
+body{
+    background-color: #bbf1ef;
+    }
+    @font-face{
+        font-family:'DNFForgedBlade';font-style:normal;font-weight:300;
+        src:url('//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Light.otf')format('opentype')}
+h1{
+    font-size: 24px;
+    font-weight: bold;
+    border: solid 3px #ffffff; 
+    border-radius: 30px;
+    padding: 20px ;
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+    font-family:'DNFForgedBlade';
+}
+
+a {
+    background-color: #ff9a9e;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+ul {
+    width: 300px;
+    margin: 0 auto;
+
+}
+
+li {
+    margin-bottom: 20px;
+
+}
+
+p,ul {
+    text-align: center;
+    padding: 20px;
+    font-family:'DNFForgedBlade';
+}
+
+img {
+    border-radius: 50%;
+
+}
