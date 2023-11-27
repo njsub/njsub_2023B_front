@@ -1,0 +1,76 @@
+.logo{
+    margin-left: 270px; 
+    width: 100px;
+    padding: 10px;
+    
+
+}
+
+.m1{
+    width: 400px;
+    border: solid 1px; color: grey;
+    padding: 30px;
+    margin: 0 auto;
+    
+}
+
+#input0{
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px;
+    padding: 10px;
+
+}
+    
+#input1{
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px ;
+    padding: 10px;
+
+}
+
+.sp1{
+    font-size: 13px;
+
+}
+
+#input3{
+    background-color: yellow;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
+#input4{
+   
+    width: 100%;
+    border: none; 
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
+.h61{
+    font-size: 13px;
+    text-align: right;
+    padding: 20px
+}
+
+.h62{
+    font-size: 13px;
+    text-align: center;
+    padding: 10px
+}
+
+.h63{
+    font-size: 13px;
+    text-align: center;
+    padding: 10px
+}
+
+.sp2{
+    font-weight: bold;
+}
