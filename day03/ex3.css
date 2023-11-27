@@ -1,0 +1,23 @@
+.booking{
+    width: 400px;
+
+}
+
+.tno{
+    font-size: 30px;
+    color: orange
+
+}
+
+.content{
+    background-color: green;
+    color: white;
+    padding: 20px;
+    width: 500px;
+    
+}
+
+.orange{
+    color: orange;
+
+}
