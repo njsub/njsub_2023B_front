@@ -1,0 +1,64 @@
+
+*{ box-sizing: border-box}
+
+.box{ 
+    border: 2px solid blue;
+    width: 100px;
+
+}
+
+.flexBox1{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.flexBox2{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.flexBox3{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    
+}
+
+.flexBox4{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.flexBox5{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: column
+    
+}
+
+.flexBox6{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: row-reverse
+    
+}
+
+.flexBox7{
+    border: 2px solid red;
+    width: 250px;
+    display: flex;
+    flex-direction: column-reverse
+        
+}
