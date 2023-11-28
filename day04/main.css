@@ -1,0 +1,100 @@
+
+/* 공통 CSS */
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+ul, ol, li{list-style-type: none;}
+
+a { text-decoration: none; color: black;}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex_box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+
+
+/* 공통 끝 */
+
+
+#header .inner{
+    justify-content: space-between;
+    padding: 10px 0;
+    
+}
+
+#top_menu{
+    font-size: 14px;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+#top_menu li{
+    margin: 5px;
+
+}
+
+#main_menu{
+    font-size: 24px;
+
+}
+
+#main_menu li{
+    margin-left: 80px;
+
+}
+
+#main_img{
+    
+    margin-top: 20px;
+    border-top: 1px solid #aaa ;
+    border-bottom: 1px solid #aaa;
+
+}
+
+#main_img img{
+    display: block;
+    width: 100%;
+
+}
+
+#footer{
+    background-color: #05354E;
+    color: white;
+    padding: 50px;
+
+}
+
+#ft_top{
+    margin-bottom: 30px;
+
+}
+
+#ft_top li{
+    margin-right: 20px;
+
+}
+
+#ft_bottom{
+    justify-content: space-between;
+    width: 100%;
+}
+
+#ft_bottom .li1{
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
