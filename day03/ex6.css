@@ -1,0 +1,41 @@
+
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+a ul li ol {
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    
+}
+
+#mainLogo{
+    width: 500px;
+    border: 1px; color: #757272;
+
+}
+
+#m_logo{
+    align-items: center;
+    margin: 20px;
+}
+
+#mainInput{
+     
+    display: flex; flex-wrap: nowrap;
+    align-items: center;
+    
+}
+
+.ip1{
+    width: 300px;
+    padding: 10px;
+    margin: 0 0 10px;
+    
+    
+    
+
+}
+
