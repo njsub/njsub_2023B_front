@@ -12,10 +12,12 @@ body{
     background-color: #F5F6F7;
 }
 
-#wrap{width: 500px; margin: 0 auto;}
+#wrap{width: 350px; margin: 0 auto;}
+
+
 #headerLogo{text-align: center; margin: 50px;}
 #headerLogo img{
-        height: 50px;
+        height: 35px;  /* 로그사이즈 */
 }
 
 .inputBox{
@@ -26,7 +28,7 @@ body{
     align-items: center;
 }
 
-.inputBox input{
+.inputBox input , select {
     border: none;
     background-color: white;
     height: 30px; width: 100%;
@@ -58,3 +60,65 @@ h5{margin: 20px 0px 5px 0px;}
     background-position-y: 0px;
     background-size: 120px 75px;
 }
+
+#birthBox{
+    display: flex;
+
+}
+
+
+.birthY , .birthM , .birthD{
+    width: 80px;
+}
+
+.titleAt{
+    font-size: 10px; color: #aeaeae;
+}
+
+#phoneBox{
+    display: flex;
+    justify-content: space-between;
+}
+
+#phoneBox{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+#phoneBox > input{
+    background-color: #03C75A;
+    border: none; color: white;
+    font-weight: bold;
+    width: 100px;
+
+}
+
+#phoneBox > div{
+    width: 250px;
+
+}
+
+#inputAuth , #inputAuth > input{
+    background-color: #f5f6f7;
+}
+
+#signupBtn{
+    background-color: #03C75A;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin: 20px 20px; 
+}
+
+.phone1{
+    margin-right: 10px;
+}
+
+/* 푸터  */
+#footerBox{ text-align: center; margin-bottom: 50px;}
+#ftTop{ font-size: 8px; color: #aeaeae; }
+#ftBottom img{ height: 10px; }
+#ftBottom span{  font-size: 5px;}
