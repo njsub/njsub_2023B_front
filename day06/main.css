@@ -63,6 +63,7 @@ h5{margin: 20px 0px 5px 0px;}
 
 #birthBox{
     display: flex;
+    justify-content: space-between;
 
 }
 
@@ -110,7 +111,9 @@ h5{margin: 20px 0px 5px 0px;}
     font-size: 20px;
     color: white;
     font-weight: bold;
-    margin: 20px 20px; 
+    margin: 40px 0 10px 0;
+    padding: 10px;
+    
 }
 
 .phone1{
@@ -120,5 +123,6 @@ h5{margin: 20px 0px 5px 0px;}
 /* 푸터  */
 #footerBox{ text-align: center; margin-bottom: 50px;}
 #ftTop{ font-size: 8px; color: #aeaeae; }
-#ftBottom img{ height: 10px; }
+#ftBottom img{ height: 10px;}
 #ftBottom span{  font-size: 5px;}
+#ftbottom{}
