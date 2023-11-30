@@ -1,0 +1,60 @@
+
+*{
+    padding: 0; margin: 0;
+}
+
+a{ 
+    color: black;
+    text-decoration: none;
+}
+    
+body{
+    background-color: #F5F6F7;
+}
+
+#wrap{width: 500px; margin: 0 auto;}
+#headerLogo{text-align: center; margin: 50px;}
+#headerLogo img{
+        height: 50px;
+}
+
+.inputBox{
+    background-color: white;
+    border: 1px solid #dedede;
+    padding: 10px;
+    display: flex; flex-wrap: nowrap;
+    align-items: center;
+}
+
+.inputBox input{
+    border: none;
+    background-color: white;
+    height: 30px; width: 100%;
+}
+
+.inputBox span{
+color: #aaa;
+}
+
+*:focus{
+    outline: none;
+}
+
+h5{margin: 20px 0px 5px 0px;}
+
+#pwIcon{
+    width: 25px; height: 25px;
+    background-image: url(https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-size: 120px 75px;
+
+}
+
+#pwConfirmIcon{
+    width: 25px; height: 25px;
+    background-image: url(https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png);
+    background-position-x: -78px;
+    background-position-y: 0px;
+    background-size: 120px 75px;
+}
