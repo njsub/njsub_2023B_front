@@ -1,0 +1,63 @@
+*{
+    padding: 0px; margin: 0px; /* 기본여백 제거 */
+    font-family: 굴림; /* 폰트 */
+    font-size: 12px; /* 폰트 사이즈 */
+    box-sizing: border-box; /* 안쪽여백, 테두리를 포함한 사이즈 모델 */
+    border: 2px solid red;
+}
+
+a{ color: black; text-decoration: none;} /* a테그의 색상. 밑줄제거 */
+li{list-style: none;} /* 글머리 제거 */
+
+#topMenu{
+    display: flex; /* 하위요소 가로배치 */
+    flex-direction: row; /* 가로배치[기본값] */
+    justify-content: space-between; /* 가로정렬 - > 오른쪽 */
+    align-items: center; /* 세로정렬 -> 가운데 */
+    padding: 10px; margin-right: 10px;
+    margin: 0 300px 0 300px;
+}
+
+#search{
+    padding-left: 300px ;
+    
+}
+
+#mainB{
+    width: 100%;
+    background-color: #ffe2d2;
+    height: 310px;
+    
+}
+
+#mainBanner{
+    width: 800px; height: 295px;
+    display: block;
+    padding: 50px 50px 50px 500px;
+
+    
+}
+
+.heroImg{
+    width: 600px; 
+}
+
+.tex1 {
+    width: 768px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+}
+
+.tex2 {   
+    width: 768px;
+    font-size: 16px;
+}
+
+.tex3{
+    width: 768px;
+}
+
+.add{
+    margin: 0 auto;
+}
