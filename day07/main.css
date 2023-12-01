@@ -1,0 +1,243 @@
+/* *{
+    border: 2px solid red; padding: 10px;
+}  */
+
+*{
+    padding: 0px; margin: 0px; /* 기본여백 제거 */
+    font-family: 굴림; /* 폰트 */
+    font-size: 12px; /* 폰트 사이즈 */
+    box-sizing: border-box; /* 안쪽여백, 테두리를 포함한 사이즈 모델 */
+}
+
+a{ color: black; text-decoration: none;} /* a테그의 색상. 밑줄제거 */
+li{list-style: none;} /* 글머리 제거 */
+
+/* ================헤더================ */
+
+
+
+/*  #topmanu > li { display: inline-block; }   본인 가로배치 */
+#topmenu{
+    display: flex; /* 하위요소 가로배치 */
+    flex-direction: row; /* 가로배치[기본값] */
+    justify-content: flex-end; /* 가로정렬 - > 오른쪽 */
+    align-items: center; /* 세로정렬 -> 가운데 */
+    padding: 10px; margin-right: 10px;
+
+ }         
+
+#mainmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* 스크롤 사용시 위치 고정 */
+    position: sticky; top: 0px;
+    /* 스티키 주의 사항
+        1. *상위요소의 높이 사이즈 안에서 고정* . vs fixed
+        2. 위치속성 1개이상 필수! : top,right,left,bottom
+        3. 상위 요소가 overflow 속성 사용금지.
+    */
+
+    background-color: white;
+    border-top: 1px solid #8e8e8e;
+
+
+   
+ }
+
+#mainmenu > ul{
+    display: flex; justify-content: space-between; align-items: center;
+    font-weight: bold; font-size: 18px;
+    width: 1100px;
+
+ }
+ 
+#mainmenu > form{border-bottom: 1px solid black; color: black; }
+ #mainmenu > form > input {
+    border: none; padding: 10px; font-size: 16px;
+    background-color: transparent; 
+}
+*:focus{ outline: none;}
+ #mainmenu > form > img {height: 18px;}
+
+
+ #mainmenu > ul > li:hover .subMenu{display: block;}
+
+
+ #mainmenu > ul > li{
+    position: relative;
+}
+
+/* 드랍 메뉴 */
+.subMenu{
+    display: none;
+    position: absolute;
+    top: 15px; left: 0;
+    background-color: white;
+    padding-top: 25px; width: 100px;
+}
+
+.subMenu li{
+    text-align: center; margin: 10px;
+}
+
+.colorRed{
+    color: red;
+}
+
+/* 
+    자손선택자 : 상위선택자 하위선택자
+    자식선택자 : 상위선택자 > 하위선택자
+
+*/
+
+/* ================본문================ */
+#mainImg{    width: 100%;}
+#mainwrap{    width: 1620px; margin: 100px auto;}
+
+#mainWrap .title{
+    font-size: 20px; font-weight: bold;
+    text-align: center;
+}
+
+#mainWrap .comment{
+    text-align: center;color: #999999;
+    margin-top: 20px;
+}
+
+
+
+#mainWrap .items{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.items{
+    width: 370px;
+    border: 1px solid red; 
+    margin-bottom: 100px;
+}
+
+/* 제품 이미지 사이즈 */
+.item img{
+    display: block;
+    width: 100%;
+}
+
+/* 색상표 / 리뷰 */
+.colorReview{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+/* 리뷰 폰트색 */
+.colorReview > .review{
+    color: #999999;
+}
+
+/* 제품 색상표 */
+.colorReview > .color > span {
+    width: 10px; height: 10px;
+    display: inline-block;
+    border: 1px solid #8e8e8e;
+}
+
+.nameSize{
+    margin: 10px 0 20px 0;
+}
+
+.nameSize .prdSize{
+   font-size: 11px; color: #999999;
+
+}
+
+.prdSize >del{
+    color: #999999;    
+
+}
+
+.price {position: relative;}
+.price > .discount{
+    position: absolute;
+    right: 0px; top: 0px;
+    color: red; font-size: 15px; font-weight: bold;
+    
+}
+
+.icon > img{
+    width: 30px;
+}
+
+
+/* ================푸터================ */
+#footer{
+    background-color: #f7f7f7;
+    
+}
+
+#footer #inner{
+    width: 1400px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    padding: 50px 0 40px 0;
+}
+
+#footer #inner > div{}
+
+#addr{
+    margin: 20px 0px 40px 0px;
+    color: #999999; text-align: center;    
+}
+
+#inner h3{
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+#inner p{
+    font-size: 12px;
+    padding: 0 0 7px;
+}
+
+/* 팝업 구역 */
+
+#popup{
+    position: fixed;
+    right: 0px; top:40%;
+}
+
+#popup li{
+    width: 45px; height: 45px;
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+    padding: 10px;
+    position: relative;
+
+
+}
+
+#popup > li > img{
+    height: 20px;
+
+}
+
+#popup > li > span{
+    position: absolute;
+    top: 5px; right: 25px;
+    font-size: 16px; color: white;
+    width: 100px; height: 20px;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+
+}
+
+#popup > li:hover .popupSub{
+    display: block;
+}
