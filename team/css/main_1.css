@@ -10,7 +10,7 @@ a{ color: black; text-decoration: none;} /* a테그의 색상. 밑줄제거 */
 li{list-style: none;} /* 글머리 제거 */
 
 .njs1{
-        
+    padding: 40px 0 50px;
         
 }
 
