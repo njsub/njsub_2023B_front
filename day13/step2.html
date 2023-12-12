@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='step2.js'></script>
+    
+</head>
+<body>
+
+      <!-- 1시20분 전까지 -->
+    
+      <div style="display: flex ;">
+        <div style="width: 50%; border: 1px solid black;">
+            <h3> 자동차 입차 입력 </h3>
+            입차 차량번호 :  <input  type="text" name="" id="carInNumber" value=""><br/>
+            입차 시간 :  <input type="time" name="" id="carInTime" value=""><br/>
+            <input onclick="입차()" type="button" value="등록">
+        </div>
+        
+        <div style="width: 50%; border: 1px solid black;">
+            <h3> 자동차 출차 입력 </h3>
+            출차 차량번호 : <input id="carOutNumber" type="text" value=""><br/>
+            출차 시간 : <input id="carOutTime" type="time" value=""><br/>
+            <input onclick="출차()" type="button" value="정산">
+        </div>
+    </div>
+
+
+</body>
+</html>
