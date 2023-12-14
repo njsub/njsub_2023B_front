@@ -169,7 +169,7 @@ function 문제10(){
                     html += `<tr>`;
         
                     for(let c=1 ; c<=line; c++){
-                        if(c==r) {html += `<td>★</td>`}
+                        if(c==r) {html += `<td>★★</td>`}
                         else if(c+r == line+1) {html += `<td>★</td>`}
                         else {html += `<td> </td>`}
                     }
@@ -182,7 +182,9 @@ function 문제10(){
         
         console.log(tableobj);
         }
-        
+
+
+    
     
 
 /*
