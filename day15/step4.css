@@ -1,0 +1,36 @@
+/* 공통 css */
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'TheJamsil5Bold';
+}
+
+#wrap { width: 300px; 
+    margin: 0 auto;
+}
+
+h1 {font-size: 30px;
+    text-align: center;}
+
+#priceTop {display: flex; 
+    
+
+    justify-content: space-between;
+}
+
+#date, #list, #price {
+    width: px;  border: none  ; 
+}
+
+.bt_1{
+    width: 60px; padding-top: 50px;
+    
+}
+
+

@@ -1,0 +1,40 @@
+/* 공통 css */
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'TheJamsil5Bold';
+   
+}
+
+#wrap{ width: 300px; margin: 0 auto; padding: 20px 20px ; background-color: bisque; border-radius: 10px;}
+
+#todoTop{display: flex; height: 40px;}
+
+#content{width: 260px; padding: 10px; border-radius: 1px; }
+
+#todoTop > input[type = "button"]{
+    width: 50px; padding: 10px; border-radius: 1px;
+    cursor: pointer;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px; font-weight: bold;
+    margin: 20px 1px; padding: 5px 10px;
+    background-color: whitesmoke;
+}
+
+.todo > .btnBox > input{
+    font-size: 15px;
+}
+
+.success{ background-color: grey;}
+.success > .content{ text-decoration: line-through; color: white;}

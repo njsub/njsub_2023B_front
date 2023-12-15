@@ -15,10 +15,10 @@ function 함수3( x,y ){return 3+8;}
     함수3();
     console.log(함수3());
     let relsult = 5 + 함수3();
-    console.log(result);
+    
 
 //4. 둘다 있는 경우
-function 함수(x, y){return x+y;}
+function 함수4(x, y){return x+y;}
 
 // 함수안에 함수
 function 함수5(){ x, y}{
@@ -30,9 +30,18 @@ function 함수6(x) {return x*x}
 
 // 변수 위치에 따른 함수
 const 전국지역 = 10;
-function 경기도(){
-    console.log(전국);
+function 경기도(지역){
+    const 경기도 = 5;
+    console.log(전국지역);
+    return 지역*5;
 }
+
+function 강원도(){
+    const 강원지역 = 5;
+    경기도(강원지역)
+    console.log(전국지역);   
+}
+경기도(전국지역);
 
 // 변수 위치에 따른 함수 내부에서 변수 호출
     // 매개변수를 이동한 *서로 다른 함수간의 지역 자료 전달
