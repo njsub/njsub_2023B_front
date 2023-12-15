@@ -1,13 +1,15 @@
+/* 공통 css */
 @font-face {
-    font-family: 'omyu_pretty';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
-/* 공통 css */
-*{ 
-    box-sizing: border-box;  font-size: 16px;
-    font-family: 'omyu_pretty';
+*{
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'TheJamsil5Bold';
+    
 }
 /* 전체구역 */
 #wrap{  width: 300px; margin: 0 auto;}
