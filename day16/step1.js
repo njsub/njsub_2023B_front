@@ -24,17 +24,30 @@ function 등록함수(){ console.log('등록함수() 실행');
     const 턱걸이 = document.querySelector('#턱걸이').value; 
     // const 총점 = document.querySelector('#총점').value; console.log( 총점 );
     // const 등급 = document.querySelector('#등급').value; console.log( 등급 );
+    
+    
+    const nIndex = 이름목록.indexOf(이름);  // 배열이름 비교 
+    const namebin = ''; // 이름이 빈칸인지 비교 상수
 
-
-    //[2.처리] 
-    이름목록.push( 이름 );  
-    팔굽혀펴기목록.push( 팔굽혀펴기); 
-    윗몸일으키기목록.push( 윗몸일으키기 );
-    턱걸이목록.push( 턱걸이 );
-    // 총점목록.push( 총점 );
+    if(!(이름 == namebin)){     // 빈칸이 입력 됬는지 비교
+        
+        //이름 중복 검사 후 -1 true 시 회원등록 , 아닐시 이미 등록된 회원 안내
+        if(nIndex == -1){       // 이름이 같은지 비교
+            //[2.처리] 
+        이름목록.push( 이름 );  
+        팔굽혀펴기목록.push( 팔굽혀펴기); 
+        윗몸일으키기목록.push( 윗몸일으키기 );
+        턱걸이목록.push( 턱걸이 );
+        alert('등록 성공');
+        }else{
+            alert("이미 등록된 회원입니다.")
+        }
+        
+    }else{
+        alert("이름을 입력해 주세요!")
+    }
 
     console.log( 이름 ); console.log( 팔굽혀펴기 );console.log( 윗몸일으키기 );console.log( 턱걸이 );
-    document.querySelector('#이름,#팔굽혀펴기,#윗몸일으키기,#턱걸이').value = ``; alert('등록 성공');
     
      //[3.출력]
 
@@ -42,21 +55,31 @@ function 등록함수(){ console.log('등록함수() 실행');
 }
 /* 어떻게 로직을 정해야 등급이 나올까 */
 
+
+
+
+
+
 function 등급(test){
 
 let result = ""
 let 총점 = Number(팔굽혀펴기목록[test])+Number(윗몸일으키기목록[test])+Number(턱걸이목록[test])
 
 if (총점 >=130) {result= "A"}
-else if (총점 >=120) {result= "B"}
-else if (총점 >=110) {result= "C"}
-else if (총점 >=100) {result= "D"}
+    else if (총점 >=120) {result= "B"}
+    else if (총점 >=110) {result= "C"}
+    else if (총점 >=100) {result= "D"}
 else {result= "재시험"}
 
 
 return result;
 
-};
+}
+
+
+
+
+
 
 
 function 삭제함수( 삭제할인덱스 ){      //f start
@@ -70,6 +93,14 @@ function 삭제함수( 삭제할인덱스 ){      //f start
     출력함수()
 
 }   //f end
+
+
+
+
+
+
+
+
 
 // 수정함수 시작
 function 수정함수(){    // 수정
@@ -115,6 +146,13 @@ function 수정함수(){    // 수정
 } // 수정함수 끝
 
 
+
+
+
+
+
+
+
 function 출력함수(){
     console.log('출력함수실행');
     let html = ``;
@@ -138,6 +176,8 @@ function 출력함수(){
     document.querySelector('#턱걸이').value = ``;
 
 }
+
+
 
 
 
