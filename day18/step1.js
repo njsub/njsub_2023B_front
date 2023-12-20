@@ -1,206 +1,101 @@
+/*
+
+객체 배열 사용
+    전국[안산, 수원, 안양]
+        안산[안산센트럴락, 안산고잔, 안산롯데시네마]
+            안센트럴락{
+                지점명:센트럴락
+                주소: 고잔로 108
+                영화: 영화[서울의봄, 노량, 싱글인서울, 3일의휴가]
+                }
+                서울의봄{
+                    12:45 : 2관
+                    12:55 : 3관
+                    13:50: 5관
+                    14:40: 1관
+                }
+
+*/
 
 
-const boardArray = [];
+// 식별자 : 절대적으로 식별할수 있는 고정 값 + 중복 없어도 한다.
+// - !!! : 배열의 인덱스는 절대적인 식별자 역할 할수 없다.
+// - 주민등록번호 , 사번 , 학번 , 제품번호 , ISBN 등등
+//    { 주민등록번호 : 870625-1 , 이름:김현수 , 주소 : 인천 , 직업 : 강사  }
 
+const 전국영화관 = [ 
+    {  지점코드 : 1 , 지점명:'안산센트럴락'     , 주소 : '고잔로 108'   , 
+        영화 : [ 
+                { 영화코드 : 1 , 영화이름 : '서울의봄' , 시간테이블 : [ { 관:'1관' , 시간 : '12:00' } , { 관:'3관' , 시간 : '12:00' } ] },
+                { 영화코드 : 2 , 영화이름 : '노량' , 시간테이블 : [ { 관:'5관' , 시간 : '14:00' } , {관:'1관' , 시간 : '16:00' } ] },
+            ] 
+    } , 
+    {  지점코드 : 2 , 지점명:'안산고잔'         , 주소 : '고잔로 203'   , 영화 : [ '아쿠아맨', '노량' ] } , 
+    {  지점코드 : 3 , 지점명:'안산롯데시네마'   , 주소 : '상록구 755'   , 영화 : ['싱글인서울'] } 
+];
 
-
-
-// 1. 등록 함수 선언
-function 등록함수(){ console.log('등록함수() 실행');
-    //[1.입력] 
-    const 이름 = document.querySelector('#이름').value; 
-    const 팔굽혀펴기 = document.querySelector('#팔굽혀펴기').value;
-    const 윗몸일으키기 = document.querySelector('#윗몸일으키기').value;
-    const 턱걸이 = document.querySelector('#턱걸이').value; 
-    // const 총점 = document.querySelector('#총점').value; console.log( 총점 );
-    // const 등급 = document.querySelector('#등급').value; console.log( 등급 );
-    
-    const board = { 이름 , 팔굽혀펴기 , 윗몸일으키기 , 털걸이}
-    
-    const nIndex = 이름목록.indexOf(이름);  // 배열이름 비교 
-    const namebin = ''; // 이름이 빈칸인지 비교 상수
-
-    if(!(이름 == namebin)){     // 빈칸이 입력 됬는지 비교
-        
-        //이름 중복 검사 후 -1 true 시 회원등록 , 아닐시 이미 등록된 회원 안내
-        if(nIndex == -1){       // 이름이 같은지 비교
-            //[2.처리] 
-        이름목록.push( 이름 );  
-        팔굽혀펴기목록.push( 팔굽혀펴기); 
-        윗몸일으키기목록.push( 윗몸일으키기 );
-        턱걸이목록.push( 턱걸이 );
-        alert('등록 성공');
-        }else{
-            alert("이미 등록된 회원입니다.")
+전국영화관출력();
+function 전국영화관출력(){  // 함수 선언 [ 실행조건 : js가 열렸을때 최초로 1번 실행 ]
+    // 1. 어디에 
+    let 전국영화관출력구역 = document.querySelector('#전국영화관출력구역');
+    // 2. 무엇을
+    let html ="";
+        for( let i = 0 ; i<전국영화관.length ; i++ ){
+            html += `<span style="margin:10px" 
+                        onclick="영화출력( ${ 전국영화관[i].지점코드 } )"> 
+                        ${ 전국영화관[i].지점명 } 
+                    </span>`
         }
-        
-    }else{
-        alert("이름을 입력해 주세요!")
-    }
-
-    console.log( 이름 ); console.log( 팔굽혀펴기 );console.log( 윗몸일으키기 );console.log( 턱걸이 );
-    
-     //[3.출력]
-
-    출력함수();
+    // 3. 츨력
+    전국영화관출력구역.innerHTML = html;
 }
-/* 어떻게 로직을 정해야 등급이 나올까 */
-
-
-
-
-
-
-function 등급(test){
-
-let result = ""
-let 총점 = Number(팔굽혀펴기목록[test])+Number(윗몸일으키기목록[test])+Number(턱걸이목록[test])
-
-if (총점 >=130) {result= "A"}
-    else if (총점 >=120) {result= "B"}
-    else if (총점 >=110) {result= "C"}
-    else if (총점 >=100) {result= "D"}
-else {result= "재시험"}
-
-
-return result;
-
-}
-
-
-
-
-
-
-
-function 삭제함수( 삭제할인덱스 ){      //f start
-    console.log("삭제함수실행");
-
-    이름목록.splice(삭제할인덱스 , 1);
-    팔굽혀펴기목록.splice(삭제할인덱스 , 1);
-    윗몸일으키기목록.splice(삭제할인덱스 , 1);
-    턱걸이목록.splice(삭제할인덱스 , 1);
-
-    출력함수()
-
-}   //f end
-
-
-
-
-
-
-
-
-
-// 수정함수 시작
-function 수정함수(){    // 수정
-    console.log("수정함수 실행")
-    // 입력
-    let 수정이름 = document.querySelector('#이름').value
-    let 팔굽혀펴기 = document.querySelector('#팔굽혀펴기').value
-    let 윗몸일으키기 = document.querySelector('#윗몸일으키기').value
-    let 턱걸이 = document.querySelector('#턱걸이').value
-    const nIndex = 이름목록.indexOf(수정이름);  // 배열이름 비교 
-    
-    console.log( 수정이름 );
-    console.log(nIndex);    // 값 확인 테스트
-    if(nIndex >= 0){        // 똑같은 이름이 없으면 -1  있으면 해당 인덱스값 
-        alert("수정되었습니다.")    // 수정 완료 메세지
-
-        if(!(팔굽혀펴기 == '')){    // 팔굽혀펴기 값 수정
-            팔굽혀펴기목록[nIndex] = 팔굽혀펴기;
-        }else{
-            팔굽혀펴기목록[nIndex] = 팔굽혀펴기목록[nIndex]
-        }
-
-        if(!(윗몸일으키기 == '')){  // 윗몸일으키기 값 수정
-            윗몸일으키기목록[nIndex] = 윗몸일으키기;
-        }else{
-            윗몸일으키기목록[nIndex] = 윗몸일으키기목록[nIndex]
-        }
-
-        if(!(턱걸이 == '')){        // 턱걸이 값 수정
-            턱걸이목록[nIndex] = 턱걸이;
-        }else{
-            턱걸이목록[nIndex] = 턱걸이목록[nIndex]
-        }
-        출력함수()  //출력
-
-    }else{  // 같은 이름이 없으면
-        alert("이름이 없습니다.")
-
-        출력함수()  // 출력
-    }
-    
-
-} // 수정함수 끝
-
-
-
-
-
-
-
-
-
-function 출력함수(){
-    console.log('출력함수실행');
-    let html = ``;
-        for( let i = 0; i<이름목록.length; i++ ){
-            html += `<div class="output">        <!-- JS 출력함수() 부분 가이드 -->
-                        <div class="name">${boardArray[i].이름}</div>
-                        <div class="list_1">${boardArray[i].팔굽혀펴기}개</div>
-                        <div class="list_2">${boardArray[i].윗몸일으키기}개</div>
-                        <div class="list_3">${boardArray[i].턱걸이}개</div>
-                        <div class="total">${Number(boardArray[i].팔굽혀펴기)+Number(boardArray[i].윗몸일으키기)+Number(boardArray[i].턱걸이)}점</div>
-                        <div class="grade">${등급(i)}</div>
-                        <div class="butn"><input onclick="삭제함수(${i})" type="button" value="삭제"></div>
-                    </div>`
-        }
-    const contentOutput = document.querySelector('#contentOutput')
-    contentOutput.innerHTML = html;
-
-    document.querySelector('#이름').value = ``;
-    document.querySelector('#팔굽혀펴기').value = ``;
-    document.querySelector('#윗몸일으키기').value = ``;
-    document.querySelector('#턱걸이').value = ``;
-
+// 
+function 영화출력( 선택한지점코드 ){        // 함수 선언 // 인수 : 인덱스 [ 실행조건 : 영화관 이름 을 클릭했을때 ]
+    // 1. 어디에
+    let 영화출력구역 = document.querySelector('#영화출력구역');
+    // 2. 무엇을
+    let html ="";
+        // 1. 선택한 지점코드 찾기.
+        for( let i = 0 ; i<전국영화관.length ; i++ ){ 
+            // 만약에 전국영화관내 지점코드 중에 내가 선택한지점코드와 같으면
+            if( 전국영화관[i].지점코드 == 선택한지점코드 ){
+                // 2. 찾았으면 해당 지점의 영화 출력 
+                for( let j = 0 ; j<전국영화관[i].영화.length ; j++ ){
+                    console.log(  전국영화관[i].영화[j] );
+                    html += `<span style="margin:10px" 
+                                onclick="시간출력( ${ 선택한지점코드 } , ${ 전국영화관[i].영화[j].영화코드 } )"> 
+                                ${ 전국영화관[i].영화[j].영화이름 } 
+                            </span>`
+                } // for end 
+            }
+        } // for end 
+    // 3. 출력 
+    영화출력구역.innerHTML = html;
 }
 
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-/*// 4. 출력 함수 [ 등록후 , 변경후 , 삭제후 = 배열의 최신상태를 HTML 대입 ]
-function 출력함수(){
-
-        const todoBottom = document.querySelector('#todoBottom');
-        // 2. [ 무엇을 ] 배열에 있는 여러  요소들을 HTML화       JS입장에서 HTML코드는 문자열.
-        let html = ' '; // 초기값
-
-        // 1. 배열내 모든 요소를 하나씩 꺼내기ㅌ
-        for( let i = 0; i < 할일목록.length ; i++ ){
-            // HTML 변수에 여러 DIV 누계
-            html += `<div class="todo ${ 상태목록[i] ? 'success' : ''}"> 
-                        <div class="content">${할일목록[i]}</div>
-                        <div class="btnBox">
-                            <input onclick="변경함수(${i})" type="button" value="변경">
-                            <input onclick="삭제함수(${i})" type="button" value="삭제">
-                        </div>
-                    </div> `
+function 시간출력( 선택한지점코드 , 선택한영화코드 ){
+    // 1. 어디에 
+    const 시간출력구역 = document.querySelector('#시간출력구역');
+    // 2. 무엇을 
+    let html = "";
+        // 지점에 영화에 시간테이블 출력 
+        //   1. 지점찾기 
+        for( let i = 0 ; i<전국영화관.length ; i++ ){
+            if( 전국영화관[i].지점코드 == 선택한지점코드 ){
+                // 2 지점에 영화찾기 
+                for( let j = 0 ; j<전국영화관[i].영화.length ; j++ ){
+                    if( 전국영화관[i].영화[j].영화코드 == 선택한지점코드 ){
+                        // 3. 지점에 영화 시간테이블 출력 
+                        for( let t = 0 ; t<전국영화관[i].영화[j].시간테이블.length ; t++ ){
+                            html += `<span style="margin:10px" "> 
+                                        ${ 전국영화관[i].영화[j].시간테이블[t].관 } --->  
+                                        ${ 전국영화관[i].영화[j].시간테이블[t].시간 } 
+                                    </span>`
+                        }
+                    }
+                }
+            }
         }
-
-        // 3. [ 대입 ] innerHTML 에 저장된 변수를 대입
-        todoBottom.innerHTML = html;
-}*/
+    // 3. 출력 
+    시간출력구역.innerHTML = html;
+}
