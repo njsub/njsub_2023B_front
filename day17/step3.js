@@ -27,6 +27,22 @@
                 board.조회수 = 0;    
                 boardArray.push(board); console.log(boardArray); // 전역상수에 보더어레이 상수에 데이터추가
 
+                const member = {
+                    작성자,
+                    비밀번호
+                } 
+                    console.log(member)
+
+                let memberArray = JSON.parse(localStorage.getItem('mamberArray'));
+                    console.log('memberArray')
+                
+                    if(memberArray == null){memberArray = []}
+
+                memberArray.push(member);
+                localStorage.setItem('memberArray', JSON.stringify('memberArray') );
+
+                
+
             
             
                 // 3. 배열에 HTML에 출력하기
