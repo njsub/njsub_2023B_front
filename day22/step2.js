@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded' , function(){
         //i는 0부터 배열의 길이만큼 1씩 증가 반복ㅠ
         
         //[조건]
-        if(i%2 ==0){headers[i].textContent='HEADERS';}
+        if( i % 2 == 0){headers[i].textContent='HEADERS';}
         else{headers[i].style.color = 'red';}
         headers[i].textContent = i % 3 ==0 ? '3배수O' : '3배수X';
-        headers[i].style.color = 'wihte';
+        headers[i].style.color = 'white';
         headers[i].style.backgroundColor = 'black';
         headers[i].style.padding = '10px';
     } // f end
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded' , function(){
     const a = document.querySelector('#a');
     const b = document.querySelector('#b');
     
-    a.textContent = `<h1>textContent 속성<h1>`;
-    b.textContent = `<h1>innerHTML 속성<h1>`;
+    a.textContent = `<h1>textContent 속성</h1>`;
+    b.innerHTML = `<h1>innerHTML 속성</h1>`;
 
 });
 
